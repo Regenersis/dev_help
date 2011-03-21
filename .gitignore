@@ -1,0 +1,7 @@
+.idea
+*.log
+db/schema.rb
+TAGS
+tags
+*.swp
+public/images/barcodes
