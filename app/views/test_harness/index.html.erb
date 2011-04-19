@@ -7,13 +7,13 @@
 
 Logout :-
 <% @apps.each_pair do |key, value| %>
-    <%= link_to "#{key.gsub("staging", "").gsub("-", " ").chomp}", "http://#{key}.therepairline.co.uk/pages/logout", :target => "test_harness" %>
+    <%= link_to "#{key}", "#{value[:logout]}", :target => "test_harness" %>
     |
 <% end %>
 <br/>
 Start :-
 <% @apps.each_pair do |key, value| %>
-    <%= link_to "#{key.gsub("staging", " ").gsub("-", " ").chomp}", "http://#{key}.therepairline.co.uk/#{value}" %>
+    <%= link_to "#{key}", "#{value[:link]}" %>
     |
 <% end %>
 
