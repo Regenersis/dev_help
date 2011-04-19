@@ -1,6 +1,8 @@
 class TestHarnessController < ApplicationController
   def index
     @reference = Luhnacy.generate(15)
+    @claim_reference = "REG#{Luhnacy.generate(14)}"
+            
 
     @apps = {"accessory-staging" => "accessories",
              "additional-product-details-staging" => "",
@@ -14,7 +16,11 @@ class TestHarnessController < ApplicationController
              "test-library-staging" =>"",
              "users-staging" => "",
              "viability-staging" => "product_viabilities",
-             "wms-staging" =>""}
+             "logistics-service-staging" => "",
+             "dispatcher-service-staging" => "",
+             "insurance-exchange-service-staging" => "insurance-exchange/app/insurance_claims",
+             "communication-service-staging" => "emails",
+             "wms-staging" => ""}
   end
 
 end
