@@ -18,7 +18,7 @@ class TestHarnessController < ApplicationController
              "viability-staging" => "product_viabilities",
              "logistics-service-staging" => "",
              "dispatcher-service-staging" => "",
-             "insurance-exchange-service-staging" => "insurance-exchange/app/insurance_claims",
+             "insurance-exchange-service-staging" => ":8080/insurance-exchange/app/insurance_claims",
              "communication-service-staging" => "emails",
              "wms-staging" => ""}
   end
